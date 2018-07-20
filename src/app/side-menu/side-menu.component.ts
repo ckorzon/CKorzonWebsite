@@ -11,18 +11,28 @@ import { routes } from '../app-routing.module';
   styleUrls: ['./side-menu.component.css']
 })
 export class SideMenuComponent implements OnInit {
-  //selectedPage: any;
+  menuVisible = true;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
     private _route: ActivatedRoute,
-    private _router: Router
+    private _router: Router,
   ) {}
 
   ngOnInit(): void {
 
 
   }
+
+toggleNav(): void {
+  if(this.menuVisible == true) {
+    this.menuVisible = false;
+  }
+  else {
+    this.menuVisible = true;
+  }
+
+}
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
