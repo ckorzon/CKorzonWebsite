@@ -1,3 +1,23 @@
-<p>
-  education works!
-</p>
+<div class="main">
+  <div class="titleBlock">
+    <span>
+      Education
+    </span>
+  </div>
+  <div class="bodyBlock">
+    <div class="cardHeader clickableBox" (click)="toggleHsBody()">
+      <span>High School</span>
+    </div>
+    <div class="cardBody" [ngClass]="{'collapse' : hsExpanded}" #hsBody>
+      <p>Information about Coginchaug</p>
+    </div>
+  </div>
+  <div class="bodyBlock">
+    <div class="cardHeader clickableBox" (click)="toggleCollegeBody()">
+      <span>College</span>
+    </div>
+    <div class="cardBody" [ngClass]="{'collapse' : collegeExpanded}" #collegeBody>
+      <p>Information about UConn</p>
+    </div>
+  </div>
+</div>

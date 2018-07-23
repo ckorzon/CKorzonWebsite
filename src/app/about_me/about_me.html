@@ -1,9 +1,21 @@
-<div class="titleBlock">
-    <h1>About Me</h1>
-</div>
-<div class="bodyBlock">
-    <div class="cardHeader">
-            <span>Interests</span>
+<div class="main">
+    <div class="titleBlock">
+        <span>About Me</span>
     </div>
-    <p>This Section will be used to discuss myself</p>
+    <div class="bodyBlock">
+        <div class="cardHeader clickableBox" (click)="toggleBackgroundBody()">
+            <span>Background</span>
+        </div>
+        <div class="cardBody" [ngClass]="{'collapse' : backgroundExpanded}" #backgroundBody>
+            <p>This Section will be used to discuss myself</p>
+        </div>
+    </div>
+    <div class="bodyBlock">
+        <div class="cardHeader clickableBox" (click)="toggleInterestBody()">
+            <span>Interests</span>
+        </div>
+        <div class="cardBody" [ngClass]="{'collapse' : interestExpanded}" #interestBody>
+            <p>This section will be used to discuss interests</p>
+        </div>
+    </div>
 </div>

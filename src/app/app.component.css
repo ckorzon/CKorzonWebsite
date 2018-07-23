@@ -17,6 +17,7 @@
     margin: 0 auto;
     text-align: left;
     border-bottom: 1px solid hsla(240, 100%, 20%, 0.6);
+    padding-top: 8px;
 }
 
 .blue {
@@ -28,4 +29,15 @@
     color: white;
     font-family: Helvetica;
     font-size: 14px;
+}
+
+.main {
+    min-height: 1014px;
+    /* height: 100%; */
+    width: 100%;
+}
+
+.clickableBox:hover {
+    cursor: pointer;
+    background-color: hsla(240, 20%, 90%, 1.0);
 }

@@ -1,3 +1,31 @@
-<p>
-  work-experience works!
-</p>
+<div class="main">
+  <div class="titleBlock">
+    <span>Work Experience</span>
+  </div>
+  <div class="bodyBlock">
+      <div class="cardHeader clickableBox" (click)="toggleTravelersBody()">
+          <span>Kelly Services - Travelers Insurance eBusiness</span>
+      </div>
+      <div class="cardBody" [ngClass]="{'collapse' : travelersExpanded}" #travelersBody>
+          <p>This section will be used to discuss my internship</p>
+      </div>
+  </div>
+
+  <div class="bodyBlock">
+      <div class="cardHeader clickableBox" (click)="togglePutnamBody()">
+          <span>Putnam Refectory</span>
+      </div>
+      <div class="cardBody" [ngClass]="{'collapse' : putnamExpanded}" #putnamBody>
+          <p>This section will be used to discuss putnam</p>
+      </div>
+  </div>
+
+  <div class="bodyBlock">
+      <div class="cardHeader clickableBox" (click)="toggleKiwiBody()">
+          <span>KiwiSpoon Frozen Yogurt</span>
+      </div>
+      <div class="cardBody" [ngClass]="{'collapse' : kiwiExpanded}" #kiwiBody>
+          <p>This section will be used to discuss KiwiSpoon</p>
+      </div>
+  </div>
+</div>
