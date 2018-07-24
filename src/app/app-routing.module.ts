@@ -8,7 +8,8 @@ import { EducationComponent } from './education/education.component';
 export const routes: Routes = [
     { path: 'about_me', component:AboutMeComponent },
     { path: 'work_experience', component: WorkExperienceComponent },
-    { path: 'education', component: EducationComponent }
+    { path: 'education', component: EducationComponent },
+    { path: '', redirectTo: '/about_me', pathMatch: 'full' }
 ];
 
 @NgModule({

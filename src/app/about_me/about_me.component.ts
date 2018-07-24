@@ -13,6 +13,10 @@ export class AboutMeComponent implements OnInit {
     interestExpanded: boolean;
     backgroundExpanded: boolean;
 
+    backgroundMessage= "My name is Conrad Brian Korzon, I am currently a Computer Science major undergraduate at the University of Connecticut. I grew up in the small town of Middlefield, Connecticut."
+
+    interestMessage: string; 
+
     constructor() { }
 
     ngOnInit() {

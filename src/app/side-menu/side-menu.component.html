@@ -9,11 +9,14 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="blue">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggleNav(); drawer.toggle()">
-        <mat-icon class="labelText" aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
+    <mat-toolbar class="blue flexContainer">
+      <span id="buttonContainer">
+        <button class="fItemLeft" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggleNav(); drawer.toggle()">
+          <mat-icon class="labelText" aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </span>
       <span></span>
+      <span class="labelText" id="siteTitle">The Official Site of Conrad Korzon</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>

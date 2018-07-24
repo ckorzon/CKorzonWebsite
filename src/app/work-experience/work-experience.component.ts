@@ -35,5 +35,4 @@ export class WorkExperienceComponent implements OnInit {
       this.kiwiExpanded = !this.kiwiExpanded;
     }
   };
-
 }

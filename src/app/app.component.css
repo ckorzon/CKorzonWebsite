@@ -41,3 +41,14 @@
     cursor: pointer;
     background-color: hsla(240, 20%, 90%, 1.0);
 }
+
+.flexContainer {
+    display: flex;
+    padding: 5px 15px;
+}
+
+p {
+    width: 95%;
+    margin: 5px auto;
+    text-align: left;
+}
