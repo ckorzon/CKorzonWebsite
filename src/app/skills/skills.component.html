@@ -1,0 +1,37 @@
+<div class="main">
+  <div class="titleBlock">
+    <span>
+      Skills
+    </span>
+  </div>
+  <div class="bodyBlock">
+    <div class="cardHeader clickableBox" (click)="toggleTechnicalBody()">
+      <span>Technical Skills</span>
+    </div>
+    <div class="cardBody" [ngClass]="{'collapse' : technicalExpanded}" #technicalBody>
+      <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Angular</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Object Oriented Programming</li>
+        <li>Scheme (programming language)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bodyBlock">
+      <div class="cardHeader clickableBox" (click)="toggleGeneralBody()">
+        <span>General Skills</span>
+      </div>
+      <div class="cardBody" [ngClass]="{'collapse' : generalExpanded}" #generalBody>
+        <ul>
+          <li>Problem Solving</li>
+          <li>Communication</li>
+          <li>Cooperation & Working on a Team</li>
+          <li>Time Management</li>
+          <li>Math Skills: Algebra, Calculus</li>
+        </ul>
+      </div>
+    </div>
+</div>

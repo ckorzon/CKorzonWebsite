@@ -13,6 +13,7 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
 import { EducationComponent } from './education/education.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule, routes } from './app-routing.module';
+import { SkillsComponent } from './skills/skills.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { AppRoutingModule, routes } from './app-routing.module';
     WorkExperienceComponent,
     EducationComponent,
     AboutMeComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,

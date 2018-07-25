@@ -9,7 +9,7 @@
       <span>High School</span>
     </div>
     <div class="cardBody" [ngClass]="{'collapse' : hsExpanded}" #hsBody>
-      <p>Information about Coginchaug</p>
+      <p>{{ hsMessage }}</p>
     </div>
   </div>
   <div class="bodyBlock">
@@ -17,7 +17,7 @@
       <span>College</span>
     </div>
     <div class="cardBody" [ngClass]="{'collapse' : collegeExpanded}" #collegeBody>
-      <p>Information about UConn</p>
+      <p>{{ uconnMessage }}</p>
     </div>
   </div>
 </div>

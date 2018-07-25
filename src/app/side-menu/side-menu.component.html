@@ -6,6 +6,7 @@
       <a mat-list-item [routerLink]="['about_me']">About Me</a>
       <a mat-list-item [routerLink]="['education']">Education</a>
       <a mat-list-item [routerLink]="['work_experience']">Work Experience</a>
+      <a mat-list-item [routerLink]="['skills']">Skills</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -16,11 +17,10 @@
         </button>
       </span>
       <span></span>
-      <span class="labelText" id="siteTitle">The Official Site of Conrad Korzon</span>
+      <span class="labelText" id="siteTitle">Biographical Website of Conrad Korzon</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-<!-- drawer.toggle() -->
