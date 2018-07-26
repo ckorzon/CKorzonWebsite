@@ -14,6 +14,7 @@ import { EducationComponent } from './education/education.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule, routes } from './app-routing.module';
 import { SkillsComponent } from './skills/skills.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { SkillsComponent } from './skills/skills.component';
     EducationComponent,
     AboutMeComponent,
     SkillsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
