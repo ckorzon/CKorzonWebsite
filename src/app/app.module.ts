@@ -15,6 +15,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule, routes } from './app-routing.module';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
+import { DemoComponent } from './demo/demo.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { FooterComponent } from './footer/footer.component';
     AboutMeComponent,
     SkillsComponent,
     FooterComponent,
+    DemoComponent,
   ],
   imports: [
     BrowserModule,

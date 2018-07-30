@@ -18,3 +18,19 @@
   align-content: left;
   flex-grow: 1;
 }
+
+#menuButton {
+  border-radius: 30%;
+  background-color: white;
+  min-width: 50px;
+  color: hsla(240, 100%, 20%, 1.0);
+}
+
+#menuButton:hover {
+  background-color: hsla(220, 100%, 70%, 1.0);
+  color: white;
+}
+
+#menuText {
+  font-weight: bold;
+}
