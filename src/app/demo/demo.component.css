@@ -1,1 +1,68 @@
 @import "../app.component.css";
+
+table {
+    /* width: 95%; */
+    margin: auto;
+    min-width: 400px;
+    text-align: left;
+    font-size: 16px;
+}
+
+thead {
+    border-bottom: 2px solid hsla(240, 100%, 20%, 0.6);
+}
+
+th {
+    font-weight: normal;
+}
+
+th:hover {
+    cursor: pointer;
+    background-color: hsla(240, 20%, 90%, 1.0);
+}
+
+.column-selected {
+    font-weight: 600;
+}
+
+.tableBox {
+    padding-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.calcSection {
+    width: 100px;
+    border: 1px solid hsla(240, 100%, 20%, 0.6);
+    display: inline-block;
+}
+
+.typeSelectionBar {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    justify-content: left;
+}
+
+.calculationSection {
+    width: 80%;
+    margin: auto;
+    border: 1px solid hsla(240, 100%, 20%, 0.6);
+    min-height: 30px;
+    text-align: left;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#operator{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    max-width: 65px;
+}
