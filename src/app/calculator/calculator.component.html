@@ -1,0 +1,77 @@
+<div class="bodyBlock">
+  <div class="cardHeader clickableBox" (click)="toggleCalculatorBody()">
+    <span>Calculator</span>
+  </div>
+  <div class="cardBody padTop" [ngClass]="{'collapse' : calculatorExpanded}" #calculatorBody>
+    <div class="typeSelectBar">
+      <div class="calcSection clickableBox" (click)="generalTab()">
+        <span>General</span>
+      </div>
+      <div class="calcSection clickableBox" (click)="physicsTab()">
+        <span>Physics</span>
+      </div>
+      <div class="calcSection clickableBox" (click)="factorialTab()">
+        <span>Factorial</span>
+      </div>
+    </div>
+    <div class="calculationSection">
+      <!-- General Section -->
+      <div *ngIf="showGeneral">
+        <div>First Number:
+          <input type="number" id="inp1" name="inp1">
+        </div>
+        <div id="operator">Operator:
+          <select id="opField">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="^">^</option>
+          </select>
+        </div>
+        <div>Second Number:
+          <input type="number" id="inp2" name="inp2">
+        </div>
+        <div>
+          <button (click)="calculate()">Calculate</button>
+        </div>
+        <div>Output:
+          <span>{{output}}</span>
+        </div>
+      </div>
+      <!-- Physics Section -->
+      <div *ngIf="showPhysics">
+        <div>Initial Velocity (m/s):
+          <input type="number" id="vStart">
+        </div>
+        <div>Final Velocity (m/s):
+          <input type="number" id="vEnd">
+        </div>
+        <div>Time Lapsed (s):
+          <input type="number" id="time">
+        </div>
+        <div>Displacement (m):
+          <input type="number" id="displacement">
+        </div>
+        <div>Acceleration (m/s^2):
+          <input type="number" id="acceleration">
+        </div>
+        <div class="centerContent"><button id="physicsCalButton" (click)="physicsCalculate()">Calculate</button></div>
+        <div class="centerContent"><div class="result">Initial Velocity: <strong>{{Vi}}</strong> m/s</div><div class="result">Final Velocity: <strong>{{Vf}}</strong> m/s</div></div>
+        <div class="centerContent"><div class="result">Time Lapsed: <strong>{{time}}</strong> s</div><div class="result">Displacement: <strong>{{displacement}}</strong> m</div></div>
+        <div class="accelReturn"><div class="result">Acceleration: <strong>{{acceleration}}</strong> m/s^2</div></div>
+        <p class="padTop">
+          * This calculator applies to simple kinematics calculations. Enter three or more values in the fields above and the remaining values will be calculated.
+          Mass, density, volume, and other properties of the object are irrelevant in these calculations. Known issues in this calculator involve the use of negative
+          numbers; further testing will be done.
+        </p>
+      </div>
+      <!-- Factorial Section -->
+      <div *ngIf="showFactorial">
+        <div>Find factorial of: <input type="number" id="fact"></div> 
+        <div><button (click)="factorialCalculate()">Calculate</button></div>
+        <div>Result: <strong>{{factorialResult}}</strong></div>
+      </div>
+    </div>
+  </div>
+</div>

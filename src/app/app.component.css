@@ -69,3 +69,9 @@ ul {
 .padTop {
     padding-top: 10px;
 }
+
+.centerContent {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}

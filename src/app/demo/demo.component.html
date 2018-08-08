@@ -1,7 +1,7 @@
 <div class="main">
   <div class="titleBlock">
     <span>
-      Demonstration
+      Demonstration Page
     </span>
   </div>
   <div class="bodyBlock">
@@ -13,14 +13,10 @@
       <table>
         <thead>
           <tr>
-            <th dataToSort="name" dataOrder="asce" (click)="sortColumn($event)"
-            [ngClass]="{'inverse': sortBy ==='name' && sortOrder === 'desc', 'column-selected': sortBy === 'name'}">Name</th>
-            <th dataToSort="height" dataOrder="asce" (click)="sortColumn($event)"
-            [ngClass]="{'inverse': sortBy === 'height' && sortOrder === 'desc', 'column-selected': sortBy === 'height'}">Height</th>
-            <th dataToSort="age" dataOrder="asce" (click)="sortColumn($event)"
-            [ngClass]="{'inverse': sortBy === 'age' && sortOrder === 'desc', 'column-selected': sortBy === 'age'}">Age</th>
-            <th dataToSort="occupation" dataOrder="asce" (click)="sortColumn($event)"
-            [ngClass]="{'inverse': sortBy === 'occupation' && sortOrder === 'desc', 'column-selected': sortBy === 'occupation'}">Occupation</th>
+            <th dataToSort="name" dataOrder="asce" (click)="sortColumn($event)" [ngClass]="{'inverse': sortBy ==='name' && sortOrder === 'desc', 'column-selected': sortBy === 'name'}">Name</th>
+            <th dataToSort="height" dataOrder="asce" (click)="sortColumn($event)" [ngClass]="{'inverse': sortBy === 'height' && sortOrder === 'desc', 'column-selected': sortBy === 'height'}">Height</th>
+            <th dataToSort="age" dataOrder="asce" (click)="sortColumn($event)" [ngClass]="{'inverse': sortBy === 'age' && sortOrder === 'desc', 'column-selected': sortBy === 'age'}">Age</th>
+            <th dataToSort="occupation" dataOrder="asce" (click)="sortColumn($event)" [ngClass]="{'inverse': sortBy === 'occupation' && sortOrder === 'desc', 'column-selected': sortBy === 'occupation'}">Occupation</th>
           </tr>
         </thead>
         <tbody>
@@ -34,30 +30,5 @@
       </table>
     </div>
   </div>
-  <div class="bodyBlock">
-    <div class="cardHeader clickableBox" (click)="toggleCalculatorBody">
-      <span>Calculator</span>
-    </div>
-    <div class="cardBody padTop" [ngClass]="{'collapse' : calculatorExpanded}" #calculatorBody>
-      <div class="typeSelectBar">
-        <div class="calcSection clickableBox"><span>General</span></div>
-        <div class="calcSection clickableBox"><span>Physics</span></div>
-        <div class="calcSection clickableBox"><span>Factorial</span></div>
-      </div>
-      <div class="calculationSection">
-        <div>First Number: <input type="number" name="inp1"></div>
-        <div id="operator">Operator: 
-          <select>
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-          </select>
-        </div>
-        <div>Second Number: <input type="number" name="inp2"></div>
-        <div><button>Calculate</button></div>
-        <div>Output: <span>{{Output}}</span></div>
-      </div>
-    </div>
-  </div>
+  <app-calculator></app-calculator>
 </div>

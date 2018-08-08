@@ -16,6 +16,7 @@ import { AppRoutingModule, routes } from './app-routing.module';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
 import { DemoComponent } from './demo/demo.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { DemoComponent } from './demo/demo.component';
     SkillsComponent,
     FooterComponent,
     DemoComponent,
+    CalculatorComponent,
   ],
   imports: [
     BrowserModule,

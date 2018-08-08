@@ -1,5 +1,6 @@
 import { Component, OnInit, NgModule, ViewChild, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
+import { CalculatorComponent } from '../calculator/calculator.component';
 import { EducationComponent } from '../education/education.component';
 import * as _ from 'lodash';
 
@@ -12,10 +13,7 @@ export class DemoComponent implements OnInit {
   constructor(){}
   
   @ViewChild('tableBox') tableBox: ElementRef;
-  @ViewChild('calculatorBody') calculatorBody: ElementRef;
-  calculatorExpanded: boolean;
   tableExpanded: boolean;
-  output: number;
   public sortBy = 'name';
   public sortOrder = 'desc'; 
   public people = [
@@ -83,12 +81,6 @@ export class DemoComponent implements OnInit {
   toggleTableBox() {
     if (this.tableBox.nativeElement) {
       this.tableExpanded = !this.tableExpanded
-    }
-  };
-
-  toggleCalculatorBody() {
-    if (this.calculatorBody.nativeElement) {
-      this.calculatorExpanded = !this.calculatorExpanded
     }
   };
 
