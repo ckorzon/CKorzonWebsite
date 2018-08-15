@@ -1,10 +1,18 @@
 <div class="main">
     <div class="titleBlock">
-        <span>About Me</span>
+        <span>Home / About Me</span>
+    </div>
+    <div class="bodyBlock">
+        <div class="cardHeader clickableBox" (click)="toggleAboutBody()">
+            <span>About This Site</span>
+        </div>
+        <div class="cardBody" [ngClass]="{'collapse' : aboutExpanded}" #aboutBody>
+            <p>{{ aboutSiteMessage }}</p>
+        </div>
     </div>
     <div class="bodyBlock">
         <div class="cardHeader clickableBox" (click)="toggleBackgroundBody()">
-            <span>Background</span>
+            <span>My Background</span>
         </div>
         <div class="cardBody" [ngClass]="{'collapse' : backgroundExpanded}" #backgroundBody>
             <p>{{ backgroundMessage }}</p>
@@ -12,7 +20,7 @@
     </div>
     <div class="bodyBlock">
         <div class="cardHeader clickableBox" (click)="toggleInterestBody()">
-            <span>Interests</span>
+            <span>My Interests</span>
         </div>
         <div class="cardBody" [ngClass]="{'collapse' : interestExpanded}" #interestBody>
             <p>{{ interestMessage }}</p>

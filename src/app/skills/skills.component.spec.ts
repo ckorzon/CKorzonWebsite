@@ -19,7 +19,19 @@ describe('SkillsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should toggle general body', () =>{
+    component.generalExpanded = false;
+    component.toggleGeneralBody();
+    expect(component.generalExpanded).toEqual(true);
+  });
+
+  it('should toggle technical body', () =>{
+    component.technicalExpanded = true;
+    component.toggleTechnicalBody();
+    expect(component.technicalExpanded).toEqual(false);
   });
 });

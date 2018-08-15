@@ -58,7 +58,7 @@ export class CalculatorComponent implements OnInit {
   calculate() {
     this.input1 = (<HTMLInputElement>document.getElementById("inp1")).value;
     this.input2 = (<HTMLInputElement>document.getElementById("inp2")).value;
-    this.operator = (<HTMLInputElement>document.getElementById("opField")).value
+    this.operator = (<HTMLInputElement>document.getElementById("opField")).value;
     switch(this.operator) {
       case "+":
         this.output = (Number(this.input1)+Number(this.input2));
@@ -78,39 +78,38 @@ export class CalculatorComponent implements OnInit {
       default:
         console.log("An error has occurred.");
     }
-    console.log(this.output);
   }
 
   getAvailableVars() {
-    if(Number((<HTMLInputElement>document.getElementById("vStart")).value)){
+    if((<HTMLInputElement>document.getElementById("vStart")).value){
       this.Vi = Number((<HTMLInputElement>document.getElementById("vStart")).value);
       this.haveVi = true;
     }else {
       // this.Vi = "";
       this.haveVi = false;
     }
-    if(Number((<HTMLInputElement>document.getElementById("vEnd")).value)){
+    if((<HTMLInputElement>document.getElementById("vEnd")).value){
       this.Vf = Number((<HTMLInputElement>document.getElementById("vEnd")).value);
       this.haveVf = true;
     }else {
       // this.Vf = "";
       this.haveVf = false;
     }
-    if(Number((<HTMLInputElement>document.getElementById("time")).value)){
+    if((<HTMLInputElement>document.getElementById("time")).value){
       this.time = Number((<HTMLInputElement>document.getElementById("time")).value);
       this.haveTime = true;
     }else {
       // this.time = "";
       this.haveTime = false;
     }
-    if(Number((<HTMLInputElement>document.getElementById("displacement")).value)){
+    if((<HTMLInputElement>document.getElementById("displacement")).value){
       this.displacement = Number((<HTMLInputElement>document.getElementById("displacement")).value);
       this.haveDis = true;
     }else {
       // this.displacement = "";
       this.haveDis = false;
     }
-    if(Number((<HTMLInputElement>document.getElementById("acceleration")).value)){
+    if((<HTMLInputElement>document.getElementById("acceleration")).value){
       this.acceleration = Number((<HTMLInputElement>document.getElementById("acceleration")).value);
       this.haveAcc = true;
     }else {
@@ -131,7 +130,7 @@ export class CalculatorComponent implements OnInit {
         this.Vi = Number(((this.Vf**2)-(2*this.acceleration*this.displacement))**0.5);
         this.haveVi = true;
       } else if(this.haveVf && this.haveTime && this.haveDis) {
-        this.Vi = Number(2*((this.displacement*this.time)-(0.5*this.Vf)));
+        this.Vi = Number((2*(this.displacement/this.time))-this.Vf);
         this.haveVi = true;
       }
       else {
@@ -149,7 +148,7 @@ export class CalculatorComponent implements OnInit {
         this.Vf = Number(2*((this.displacement*this.time)-(0.5*this.Vi)));
         this.haveVf = true;
       } else if(this.haveDis && this.haveVi && this.haveAcc){
-        this.Vf = Number(((this.Vi**2)+(2*this.acceleration*this.displacement))**0.5);
+        this.Vf = Number(((this.Vi*this.Vi)+(2*this.acceleration*this.displacement))**0.5);
         this.haveVf = true;
       } else{
         this.haveVf = false;
@@ -180,7 +179,7 @@ export class CalculatorComponent implements OnInit {
         this.time = Number((this.Vf-this.Vi)/this.acceleration);
         this.haveTime = true;
       } else if(this.haveDis && this.haveVi && this.haveVf){
-        this.time = Number(this.displacement*0.5*(this.Vi+this.Vf));
+        this.time = Number((this.displacement*2)/(this.Vi+this.Vf));
         this.haveTime = true;
       } else if(this.haveDis && this.haveVi && this.haveAcc){
         this.getVf();

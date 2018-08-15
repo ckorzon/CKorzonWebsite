@@ -3,7 +3,7 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-toolbar class="blue"></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['about_me']">About Me</a>
+      <a mat-list-item [routerLink]="['about_me']">Home</a>
       <a mat-list-item [routerLink]="['education']">Education</a>
       <a mat-list-item [routerLink]="['work_experience']">Work Experience</a>
       <a mat-list-item [routerLink]="['skills']">Skills</a>
@@ -24,4 +24,3 @@
     <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
-

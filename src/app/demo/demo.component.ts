@@ -10,12 +10,12 @@ import * as _ from 'lodash';
   styleUrls: ['./demo.component.css']
 })
 export class DemoComponent implements OnInit {
-  constructor(){}
-  
+  constructor() { }
+
   @ViewChild('tableBox') tableBox: ElementRef;
   tableExpanded: boolean;
   public sortBy = 'name';
-  public sortOrder = 'desc'; 
+  public sortOrder = 'desc';
   public people = [
     {
       name: "Gustave",
@@ -63,14 +63,13 @@ export class DemoComponent implements OnInit {
     const target = event.currentTarget;
     this.sortBy = target.getAttribute('dataToSort');
     this.sortOrder = target.getAttribute('dataOrder');
-
     target.setAttribute('dataOrder', this.sortOrder === 'asce' ? 'desc' : 'asce');
     this.sortTable();
   }
 
   activeSort(property, inverse) {
     inverse = inverse ? -1 : 1;
-    return function(a, b) {
+    return function (a, b) {
       const x = isNaN(Number(a[property])) ? a[property].toLocaleLowerCase() : Number(a[property]);
       const y = isNaN(Number(b[property])) ? b[property].toLocaleLowerCase() : Number(b[property]);
       const result = (x < y) ? -1 : (x > y) ? 1 : 0;
