@@ -17,32 +17,29 @@ export class SideMenuComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private _route: ActivatedRoute,
     private _router: Router,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
 
 
   }
 
-toggleNav(): void {
-  if(this.menuVisible == true) {
-    this.menuVisible = false;
-  }
-  else {
-    this.menuVisible = true;
-  }
-
-}
+  // toggleNav(): void {
+  //   if (this.menuVisible == true) {
+  //     this.menuVisible = false;
+  //   }
+  //   else {
+  //     this.menuVisible = true;
+  //   }
+  // }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
     );
-  
-
 
   navTo(page): void {
-    this._router.navigate(['/',page])
+    this._router.navigate(['/', page])
   }
 
 }

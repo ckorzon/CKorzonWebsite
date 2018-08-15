@@ -44,7 +44,5 @@ describe('AboutMeComponent', () => {
         expect(component.backgroundMessage).toBeDefined();
         expect(component.aboutSiteMessage).toBeDefined();
         expect(component.interestMessage).toBeDefined();
-    })
-
-
+    });
 });
