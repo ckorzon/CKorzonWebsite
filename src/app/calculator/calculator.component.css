@@ -48,3 +48,11 @@ input {
 #physicsCalcButton {
     margin: auto;
 }
+
+button {
+    border-radius: 10%;
+    border-color: hsla(220, 100%, 70%, 1.0);
+    background-color: hsla(240, 100%, 20%, 1.0);
+    color: white;
+    margin: 10px 0;
+}

@@ -34,3 +34,9 @@
 #menuText {
   font-weight: bold;
 }
+
+@media(max-width: 520px){
+  #siteTitle{
+    display: none;
+  }
+}
