@@ -52,6 +52,12 @@ export class DemoComponent implements OnInit {
       height: 185,
       age: 18,
       occupation: "Decision Consultant"
+    },
+    {
+      name: "Nate",
+      height: 192,
+      age: 21,
+      occupation: "Acai Bowl Artisian"
     }
   ];
 
